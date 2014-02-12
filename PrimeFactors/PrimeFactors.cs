@@ -5,20 +5,16 @@ namespace PrimeFactors
 {
     public class PrimeFactors
     {
-        public static List<Int32> Generate(Int32 number)
+        public static IEnumerable<Int32> Generate(Int32 number)
         {
-            var primes = new List<Int32>();
-            
             for (var divisor = 2; number > 1; divisor++)
             {
                 while (number % divisor == 0)
                 {
-                    primes.Add(divisor);
+                    yield return divisor;
                     number /= divisor;
                 }
             }
-            
-            return primes;
         }
     }
 }
