@@ -8,24 +8,17 @@ namespace PrimeFactors
         public static List<Int32> Generate(Int32 number)
         {
             var primes = new List<Int32>();
-
-            if (number > 1)
+            
+            for (var divisor = 2; number > 1; divisor++)
             {
-                while (IsEven(number))
+                while (number % divisor == 0)
                 {
-                    primes.Add(2);
-                    number /= 2;
+                    primes.Add(divisor);
+                    number /= divisor;
                 }
-                if (number > 1)
-                    primes.Add(number);
             }
-
+            
             return primes;
-        }
-
-        private static Boolean IsEven(Int32 number)
-        {
-            return number % 2 == 0;
         }
     }
 }

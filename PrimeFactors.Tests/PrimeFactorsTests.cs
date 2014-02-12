@@ -43,5 +43,11 @@ namespace PrimeFactors.Tests
         {
             Assert.That(new List<Int32> { 2, 2, 2 }, Is.EqualTo(PrimeFactors.Generate(8)));
         }
+
+        [Test]
+        public void TestGenerateForNine()
+        {
+            Assert.That(new List<Int32> { 3, 3 }, Is.EqualTo(PrimeFactors.Generate(9)));
+        }
     }
 }
