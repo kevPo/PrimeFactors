@@ -37,5 +37,11 @@ namespace PrimeFactors.Tests
         {
             Assert.That(new List<Int32> { 2, 3 }, Is.EqualTo(PrimeFactors.Generate(6)));
         }
+
+        [Test]
+        public void TestGenerateForEight()
+        {
+            Assert.That(new List<Int32> { 2, 2, 2 }, Is.EqualTo(PrimeFactors.Generate(8)));
+        }
     }
 }

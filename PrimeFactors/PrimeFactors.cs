@@ -11,7 +11,7 @@ namespace PrimeFactors
 
             if (number > 1)
             {
-                if (IsEven(number))
+                while (IsEven(number))
                 {
                     primes.Add(2);
                     number /= 2;
