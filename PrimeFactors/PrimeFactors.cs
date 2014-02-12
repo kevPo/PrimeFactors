@@ -11,7 +11,7 @@ namespace PrimeFactors
 
             if (number > 1)
             {
-                if (number % 2 == 0)
+                if (IsEven(number))
                 {
                     primes.Add(2);
                     number /= 2;
@@ -21,6 +21,11 @@ namespace PrimeFactors
             }
 
             return primes;
+        }
+
+        private static Boolean IsEven(Int32 number)
+        {
+            return number % 2 == 0;
         }
     }
 }
