@@ -17,37 +17,37 @@ namespace PrimeFactors.Tests
         [Test]
         public void TestGenerateForTwo()
         {
-            Assert.That(new[] { 2 }, Is.EqualTo(PrimeFactors.Generate(2)));
+            Assert.That(PrimeFactors.Generate(2), Is.EqualTo(new[] { 2 }));
         }
 
         [Test]
         public void TestGenerateForThree()
         {
-            Assert.That(new[] { 3 }, Is.EqualTo(PrimeFactors.Generate(3)));
+            Assert.That(PrimeFactors.Generate(3), Is.EqualTo(new[] { 3 }));
         }
 
         [Test]
         public void TestGenerateForFour()
         {
-            Assert.That(new[] { 2, 2 }, Is.EqualTo(PrimeFactors.Generate(4)));
+            Assert.That(PrimeFactors.Generate(4), Is.EqualTo(new[] { 2, 2 }));
         }
 
         [Test]
         public void TestGenerateForSix()
         {
-            Assert.That(new[] { 2, 3 }, Is.EqualTo(PrimeFactors.Generate(6)));
+            Assert.That(PrimeFactors.Generate(6), Is.EqualTo(new[] { 2, 3 }));
         }
 
         [Test]
         public void TestGenerateForEight()
         {
-            Assert.That(new[] { 2, 2, 2 }, Is.EqualTo(PrimeFactors.Generate(8)));
+            Assert.That(PrimeFactors.Generate(8), Is.EqualTo(new[] { 2, 2, 2 }));
         }
 
         [Test]
         public void TestGenerateForNine()
         {
-            Assert.That(new[] { 3, 3 }, Is.EqualTo(PrimeFactors.Generate(9)));
+            Assert.That(PrimeFactors.Generate(9), Is.EqualTo(new[] { 3, 3 }));
         }
     }
 }
